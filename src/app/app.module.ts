@@ -6,7 +6,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule, routingComponents} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
-import { FriendWallComponent } from './friends/friend-wall/friend-wall/friend-wall.component';
+
+import {UserService} from './services/user.service';
+
 
 
 
@@ -14,8 +16,7 @@ import { FriendWallComponent } from './friends/friend-wall/friend-wall/friend-wa
   declarations: [
     AppComponent,
     MenuComponent,
-    routingComponents,
-    FriendWallComponent
+    routingComponents
   ],
   imports: [
     BrowserModule,
@@ -23,7 +24,7 @@ import { FriendWallComponent } from './friends/friend-wall/friend-wall/friend-wa
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,6 @@
-<p>friends works!</p>
+<ul *ngFor="let friend of friends">
+  <li (click)="redirect(friend)">
+      <img [src]="friend.profImage" alt="userImage" width="80px" height='60px'>
+      {{friend.fName}} {{friend.lName}}
+  </li>
+</ul>

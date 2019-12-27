@@ -16,6 +16,7 @@ export class WallComponent implements OnInit {
   ngOnInit() {
     this.getUser(0);
   }
+
   getUser(id:number){
     this.userService.getUser()
     .subscribe((user:User[]) => this.user=user[id]);

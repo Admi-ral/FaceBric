@@ -1,1 +1,11 @@
-<p>friend-wall works!</p>
+<div class="profile">
+  <div class="profilePicture">
+    <img [src]="user.profImage" alt="userPicture" width="350px">
+  </div>
+  <div class="profileInfo">
+    <p>First Name: {{user.fName}}</p>
+    <p>Last Name: {{user.lName}}</p>
+    <p>Age: {{user.age}}</p>
+    <p>email: {{user.email}}</p>
+  </div>
+</div>

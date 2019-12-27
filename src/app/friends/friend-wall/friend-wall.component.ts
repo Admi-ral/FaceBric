@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import { User } from '../../interfaces/user.interface';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-friend-wall',
@@ -6,10 +9,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./friend-wall.component.css']
 })
 export class FriendWallComponent implements OnInit {
+  id:number;
+  user: User;
 
-  constructor() { }
+  constructor(private userService: UserService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-  }
+      this.route.paramMap
+        .subscribe((params: ParamMap)=>{
+          this.id = parseInt(params.get('id'));
+        });
 
-}
+      this.userService.getUser()
+      .subscribe((user:User[]) => this.user = user[this.id]);
+          }
+  }
