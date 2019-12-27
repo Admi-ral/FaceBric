@@ -1,0 +1,47 @@
+[
+  {
+    "id": 0,
+    "fName" :"Kristina",
+    "lName" :"Meza",
+    "age" :23,
+    "dob" : {
+      "day":25,
+      "month":5,
+      "year": 1993
+    },
+    "email": "kristina.meza@imaginary.com",
+    "password": "test",
+    "profImage": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/6000ca11-0422-48c9-9254-65f6ba392a7c/db2lit5-e0a3b767-5e6c-47b1-b9eb-7593f50eb1da.png/v1/fill/w_1024,h_576,q_80,strp/okabe_and_makise__steins_gate__minimal_wallpaper_by_max028_db2lit5-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NTc2IiwicGF0aCI6IlwvZlwvNjAwMGNhMTEtMDQyMi00OGM5LTkyNTQtNjVmNmJhMzkyYTdjXC9kYjJsaXQ1LWUwYTNiNzY3LTVlNmMtNDdiMS1iOWViLTc1OTNmNTBlYjFkYS5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.1TY2t_qLT2dTqbQ827Kj5O6kEx3C5B3X3yrRu4nEym4"
+  },
+
+  {
+    "id": 1,
+    "fName" :"Alex",
+    "lName" :"Smith",
+    "age" :47,
+    "dob" : {
+      "day":5,
+      "month":9,
+      "year": 1972
+    },
+    "email": "alex.smith@imaginary.com",
+    "password": "test",
+    "profImage": "https://www.psdstack.com/wp-content/uploads/2016/10/pixabay-1.jpg"
+  },
+
+  {
+  "id": 2,
+  "fName" :"Bob",
+  "lName" :"Dael",
+  "age" :30,
+  "dob" : {
+    "day":8,
+    "month":3,
+    "year": 1989
+  },
+  "email": "bob.dael@imaginary.com",
+  "password": "test",
+  "profImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThalQefg-CIjuGSyXczIYMCABownzvBt15Qdz0f7pV5J-o3bAX&s"
+  }
+
+]
