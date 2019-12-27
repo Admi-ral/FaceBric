@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 
 import {UserService} from './services/user.service';
+import {PostService} from './services/post.service';
 import { CreatePostComponent } from './wall/create-post/create-post.component';
 import { DisplayPostsComponent } from './wall/display-posts/display-posts.component';
 
@@ -28,7 +29,7 @@ import { DisplayPostsComponent } from './wall/display-posts/display-posts.compon
     HttpClientModule,
     FormsModule
   ],
-  providers: [UserService],
+  providers: [UserService, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

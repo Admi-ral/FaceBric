@@ -1,1 +1,30 @@
-<p>create-post works!</p>
+<form #form = ngForm
+(ngSubmit)="onSubmit()"
+autocomplete="off"
+class="comment"
+method="post">
+
+  <textarea
+  required
+  [(ngModel)]="post.content"
+  type="text"
+  name="content"
+  placeholder="Add content to your post"
+  >{{post.content}}</textarea>
+
+  <br>
+  <button type="button" (click)="clearContent()">clear</button>
+  <br>
+
+  <textarea
+  [(ngModel)]="post.image"
+  type="url"
+  name="image"
+  placeholder="Add url to image"
+  >{{post.image}}</textarea>
+
+  <br>
+  <button type="button" (click)="clearImage()">clear</button>
+  <br>
+  <button [disabled]="form.form.invalid" type="submit" name="button">create post</button>
+</form>

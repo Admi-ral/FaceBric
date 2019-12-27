@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+
+import {Post} from '../../interfaces/post.interface';
 
 @Component({
   selector: 'app-create-post',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-post.component.css']
 })
 export class CreatePostComponent implements OnInit {
+  post:Post;
 
-  constructor() { }
+  constructor() {
+    this.post={content:'', image:''};
+  }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  clearContent(){
+    this.post.content = '';
+  }
+
+  clearImage(){
+    this.post.image = '';
+  }
+
+  onSubmit(){
   }
 
 }

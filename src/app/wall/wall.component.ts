@@ -9,6 +9,7 @@ import {UserService} from '../services/user.service';
   styleUrls: ['./wall.component.css']
 })
 export class WallComponent implements OnInit {
+
   user:User;
 
   constructor(private userService:UserService) { }
