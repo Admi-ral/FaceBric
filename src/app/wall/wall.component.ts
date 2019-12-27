@@ -1,15 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
+import { User } from '../interfaces/user.interface';
+import {UserService} from '../services/user.service';
+
 @Component({
   selector: 'app-wall',
   templateUrl: './wall.component.html',
   styleUrls: ['./wall.component.css']
 })
 export class WallComponent implements OnInit {
+  user:User;
 
-  constructor() { }
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
+    this.getUser(0);
+  }
+  getUser(id:number){
+    this.userService.getUser()
+    .subscribe((user:User[]) => this.user=user[id]);
   }
 
 }
