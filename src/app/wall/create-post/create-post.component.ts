@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 
 import {Post} from '../../interfaces/post.interface';
 
@@ -9,6 +9,7 @@ import {Post} from '../../interfaces/post.interface';
 })
 export class CreatePostComponent implements OnInit {
   post:Post;
+  @Output() public postEvent = new EventEmitter<Post>();
 
   constructor() {
     this.post={content:'', image:''};
@@ -25,6 +26,11 @@ export class CreatePostComponent implements OnInit {
   }
 
   onSubmit(){
+    let post:Post;
+    post = Object.assign({},this.post);
+    this.clearContent();
+    this.clearImage();
+    this.postEvent.emit(post);
   }
 
 }

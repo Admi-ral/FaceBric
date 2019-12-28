@@ -1,1 +1,9 @@
-
+<div *ngFor="let arrPost of posts">
+  <p>{{arrPost.content}}</p>
+  <div *ngIf="arrPost.image">
+    <img [src]="arrPost.image" alt="postImage">
+  </div>
+  <div *ngIf="arrPost.image || arrPost.content">
+    <hr>
+  </div>
+</div>

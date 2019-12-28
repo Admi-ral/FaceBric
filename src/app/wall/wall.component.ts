@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { User } from '../interfaces/user.interface';
 import {UserService} from '../services/user.service';
+import {Post} from '../interfaces/post.interface';
 
 @Component({
   selector: 'app-wall',
@@ -9,10 +10,11 @@ import {UserService} from '../services/user.service';
   styleUrls: ['./wall.component.css']
 })
 export class WallComponent implements OnInit {
+  post:Post;
 
   user:User;
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService) {}
 
   ngOnInit() {
     this.getUser(0);

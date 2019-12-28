@@ -12,9 +12,9 @@
 
 <div class="posts">
   <div class="create-post">
-    <app-create-post></app-create-post>
+    <app-create-post (postEvent)="post=$event"></app-create-post>
   </div>
   <div class="display-post">
-    <app-display-posts></app-display-posts>
+    <app-display-posts [postPassed]="post"></app-display-posts>
   </div>
 </div>

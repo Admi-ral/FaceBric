@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges} from '@angular/core';
+import { Component, OnInit, OnChanges, Input} from '@angular/core';
+
 import {Post} from '../../interfaces/post.interface';
 
 @Component({
@@ -7,17 +8,18 @@ import {Post} from '../../interfaces/post.interface';
   styleUrls: ['./display-posts.component.css']
 })
 export class DisplayPostsComponent implements OnInit, OnChanges {
-  @Input('createdPost') post:Post;
   posts:Post[];
+  @Input('postPassed') post:Post;
 
   constructor() {
-    this.posts = [];
+    this.posts = new Array<Post>();
   }
 
   ngOnInit() {}
 
   ngOnChanges(){
-    this.posts.unshift(this.post);
+    console.log(this.post);
+    this.posts.unshift(Object.assign({},this.post));
   }
 
 
